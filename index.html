@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linee Guida Design</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Box Generale -->
+        <div class="box" id="generale">
+            <div class="header" onclick="toggleSection('generale')">
+                <h3>Generale</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'generale')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Ciclo in generale</li>
+                    <li>Tubi collegamento impianto accessibili</li>
+                    <li>Connessioni verso esterno coerenti con P&ID</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Linea BT -->
+        <div class="box" id="linea-bt">
+            <div class="header" onclick="toggleSection('linea-bt')">
+                <h3>Linea BT</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'linea-bt')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Tubi BT scaricano prima di ingresso in collettore aspiraz. MT (fig. 8)</li>
+                    <li>Tubo della mandata degli LT entra almeno 30-40 cm prima dell'ingresso nel collettore d'aspirazione MT?</li>
+                    <li>Se presenti 2x ricevitori liquido in parallelo, linea liquida verso utenze cliente deve uscire da un solo ricevitore</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Cartiglio -->
+        <div class="box" id="cartiglio">
+            <div class="header" onclick="toggleSection('cartiglio')">
+                <h3>Cartiglio</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'cartiglio')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Segnato se presenti metri extra cablaggio?</li>
+                    <li>Segnati isolamento e/o cablaggio halogen free</li>
+                    <li>Unità tutta da isolare o ci sono parti da non isolare?</li>
+                    <li>Scritto di cambiare molle per valvole Enex usate per il flash?</li>
+                    <li>Indicato intestazione se necessario installare TK4 invece di TK3?</li>
+                    <li>Indicato intestazione se necessario installare kit antifoma per TK3?</li>
+                    <li>Indicato intestazione se presenti rubinetti/valvole da piombare?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Telaio -->
+        <div class="box" id="telaio">
+            <div class="header" onclick="toggleSection('telaio')">
+                <h3>Telaio</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'telaio')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Piedi antivibranti distribuiti uniformemente sotto al telaio</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Spare Parts -->
+        <div class="box" id="spare-parts">
+            <div class="header" onclick="toggleSection('spare-parts')">
+                <h3>Spare Parts</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'spare-parts')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Se scamb. fornito a parte, check connessioni rappresentate giuste (specie per evaporatori con distributori o recuperi con PS diverse tra lato CO2 e lato acqua)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Comp. Paralleli -->
+        <div class="box" id="comp-paralleli">
+            <div class="header" onclick="toggleSection('comp-paralleli')">
+                <h3>Comp. Paralleli</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'comp-paralleli')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>In uscita dal rigenerativo multitubo, le valvole di flash e il tubo di aspirazione aux devono essere sulla stessa altezza per distribuire equamente olio (figg. 11A, B)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Orientamento -->
+        <div class="box" id="orientamento">
+            <div class="header" onclick="toggleSection('orientamento')">
+                <h3>Orientamento</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'orientamento')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Verso check valve in parallelo a motori</li>
+                    <li>Verso check valve compressori MT & BT</li>
+                    <li>Verso check valve eiettori</li>
+                    <li>Verso gruppo valvole AP</li>
+                    <li>Verso gruppo valvole BP</li>
+                    <li>Versi valvole solenoide (AKV, GSR…)</li>
+                    <li>Versi spilli (indicatore liv / linea olio / backup unit)</li>
+                    <li>Versi filtri Y OK</li>
+                    <li>Filtri cartuccia: ingresso verticale, uscita orizzontale (fig. 10A, B, C)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Rubinetti -->
+        <div class="box" id="rubinetti">
+            <div class="header" onclick="toggleSection('rubinetti')">
+                <h3>Rubinetti</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'rubinetti')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Presenti tutti rubinetti ottone necessari</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Bilanciamento -->
+        <div class="box" id="bilanciamento">
+            <div class="header" onclick="toggleSection('bilanciamento')">
+                <h3>Bilanciamento</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'bilanciamento')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Più filtri in parallelo: filtri bilanciati correttamente</li>
+                    <li>Più sep. olio in parallelo: separatori bilanciati correttamente</li>
+                    <li>Scambiatori a piastre in parallelo sono ben bilanciati?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Batterie Alettate -->
+        <div class="box" id="batterie-alettate">
+            <div class="header" onclick="toggleSection('batterie-alettate')">
+                <h3>Batterie Alettate</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'batterie-alettate')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Ventilatore condensa. ha abbastanza spazio per ingresso aria</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Backup Unit -->
+        <div class="box" id="backup-unit">
+            <div class="header" onclick="toggleSection('backup-unit')">
+                <h3>Backup Unit</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'backup-unit')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Installato XMLB070 sul rack del ricevitore?</li>
+                    <li>Tubo ritorno CO2 liquida condensata senza risalite (riferim. fig. 5)</li>
+                    <li>Piping di ingresso e uscita CO2 realizzato con riferim. a fig. 9</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Scambiatori a Piastre -->
+        <div class="box" id="scambiatori-a-piastre">
+            <div class="header" onclick="toggleSection('scambiatori-a-piastre')">
+                <h3>Scambiatori a Piastre</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'scambiatori-a-piastre')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Scambiatori: modello / PS max / n° piastre</li>
+                    <li>Scambiatori collegati correttamente in equi/controcorrente</li>
+                    <li>Scamb. doppio passaggio: ingresso e uscita CO2 in basso</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Suction-Liquid -->
+        <div class="box" id="suction-liquid">
+            <div class="header" onclick="toggleSection('suction-liquid')">
+                <h3>Suction-Liquid</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'suction-liquid')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>La CO2 entra dal basso su lato LT</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Recupero Calore -->
+        <div class="box" id="recupero-calore">
+            <div class="header" onclick="toggleSection('recupero-calore')">
+                <h3>Recupero Calore</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'recupero-calore')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>CO2 entra dall'alto</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box GasCooler/ InterCooler a Piastre -->
+        <div class="box" id="gascooler-intercooler">
+            <div class="header" onclick="toggleSection('gascooler-intercooler')">
+                <h3>GasCooler/ InterCooler a Piastre</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'gascooler-intercooler')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>CO2 entra dall'alto</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Controllo Modelli -->
+        <div class="box" id="controllo-modelli">
+            <div class="header" onclick="toggleSection('controllo-modelli')">
+                <h3>Controllo Modelli</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'controllo-modelli')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Modelli attuatori e 3-vie corretti?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Controlli Compressori -->
+        <div class="box" id="controlli-compressori">
+            <div class="header" onclick="toggleSection('controlli-compressori')">
+                <h3>Controlli Compressori</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'controlli-compressori')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Compressori: controlla modello e posizione</li>
+                    <li>TK3: controllo delta-P (comp. aux / PDC / AC)</li>
+                    <li>TK4: sono stati richiesti</li>
+                    <li>Inverter: controlla modello e se tutti presenti</li>
+                    <li>Presenti almeno 10 cm di spazio vuoto sotto e dietro ciascun inverter per favorire la ventilazione</li>
+                    <li>Pressostati compressori: controlla modello</li>
+                    <li>Compressori rimovibili facilmente dall'unità? Niente montanti davanti a nessun compressore</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Collettori di Aspirazione -->
+        <div class="box" id="collettori-aspirazione">
+            <div class="header" onclick="toggleSection('collettori-aspirazione')">
+                <h3>Collettori di Aspirazione</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'collettori-aspirazione')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>I manicotti dei collettori entrano nel collettore fino a 5 mm dal fondo?</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Box Sensori Livello e Coldpipe -->
+        <div class="box" id="sensori-livello-coldpipe">
+            <div class="header" onclick="toggleSection('sensori-livello-coldpipe')">
+                <h3>Sensori Livello e Coldpipe</h3>
+                <span class="check-icon" onclick="checkGuideline(event, 'sensori-livello-coldpipe')">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="grey" stroke-width="2" fill="none"/>
+                        <path d="M8 12l2 2 4-4" stroke="grey" stroke-width="2" fill="none"/>
+                    </svg>
+                </span>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Presenza tutti sensori livello</li>
+                    <li>Sens. livello min Coldpipe in corrispondenza attacco linea liquida</li>
+                    <li>Uscita flash da alto del ric.: livello max Coldpipe a 75% altezza ric.</li>
+                    <li>Uscita flash da lato del ric.: livello max Coldpipe in corrispondenza attacco linea flash</li>
+                    <li>Asta livello e ricevitore con recupero dell'olio: parte bassa dell'asta di livello a quota sempre più alta rispetto al tubo del recupero olio</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
