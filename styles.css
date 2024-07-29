@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.box {
+    background-color: #ffffff;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.check-icon svg {
+    fill: none;
+    stroke: grey;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.3s;
+}
+
+.content {
+    padding: 0 15px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.box.checked .header {
+    background-color: #e0f7e0;
+}
+
+.box.checked .check-icon svg {
+    stroke: green;
+}
+
+.content.open {
+    padding: 15px;
+    max-height: 1000px; /* Altezza massima sufficiente per il contenuto */
+}
